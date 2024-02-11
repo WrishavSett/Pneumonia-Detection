@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pneumonia Detection</h1>
+    <p class="italic">Please upload the X-ray of your lungs</p>
+    <div id="imageContainer">
+      <img id="uploadedImage" src="#" alt="Uploaded Image">
+    </div>
+    <div class="control-buttons">
+    <button id="uploadButton" class="blueButton">Upload</button>
+    <button id="detectButton" class="blueButton" style="display: none;">Detect</button>
+    </div>
+    <p id="result" class="bold" style="display: none;"></p>
+    <input type="file" id="fileInput" style="display: none;">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

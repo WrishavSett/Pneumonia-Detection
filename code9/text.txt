@@ -1,0 +1,2 @@
+Is a modification of code3 (pneumonia-detection-3-ipynb) with added epochs for better accuracy
+Medical Image Analysis with CNN

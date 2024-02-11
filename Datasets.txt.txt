@@ -1,0 +1,2 @@
+Chest X-Ray Images (Pneumonia): https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/code
+VGG-19: https://www.kaggle.com/datasets/keras/vgg19

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      overflow: hidden;
+    }
+    .title{
+      position: center;
+      color: rgb(243, 243, 240);
+    }
+    
+    .star {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      animation: bounceStar 2s linear infinite;
+    }
+    .upload_img{
+	    background-color: #444; /* Box background color */
+      border-radius: 20px;
+      padding: 20px;
+      margin: 200px auto;
+      max-width: 400px;
+     }
+     h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  
+    .italic {
+      font-style: italic;
+      color: wheat;
+    }
+     #file_input{
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+     }
+     #Upload{
+      padding: 10px;
+      background-color: #0b9ff5;
+      color: white;
+      border: none;
+      cursor: pointer;
+     }
+    
+    @keyframes bounceStar {
+      0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(200px, 200px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <center>
+  <div class="upload_img">
+    <h1 class="title">Pneumonia Dection</h1>
+    <p class="italic">Please upload the X-ray of your lungs</p>
+   <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" id="file_input" required><br><br>
+    <input type="submit" value="Upload" id="Upload">
+   </form>
+  </div>
+
+  <script>
+    const colors = ['yellow', 'red', 'green', 'blue', 'purple', 'orange'];
+    const file_input = document.getElementById('file_input');
+
+    file_input.addEventListener('click', () => {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.backgroundColor = getRandomColor();
+      star.style.top = getRandomPosition() + 'px';
+      star.style.left = getRandomPosition() + 'px';
+      document.body.appendChild(star);
+    });
+
+    function getRandomPosition() {
+      const maxPosition = Math.max(window.innerWidth, window.innerHeight) - 20;
+      return Math.floor(Math.random() * maxPosition);
+    }
+
+    function getRandomColor() {
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+  </script>
+</body>
+</html>
